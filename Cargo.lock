@@ -77,8 +77,15 @@ checksum = "8371e4e5341c3a96db127eb2465ac681ced4c433e01dd0e938adbef26ba93ba5"
 name = "lynx-cli"
 version = "0.1.0"
 dependencies = [
+ "lynxlang",
  "structopt",
 ]
+
+[[package]]
+name = "lynxlang"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "627f728d931e7652f109024c0ecc1bc440e91563e6464504a8788a12633229d7"
 
 [[package]]
 name = "proc-macro-error"

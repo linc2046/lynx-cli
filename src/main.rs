@@ -1,6 +1,8 @@
 use std::path::PathBuf;
 use structopt::StructOpt;
 
+mod repl;
+
 #[derive(Debug, StructOpt)]
 #[structopt(name = "Lynx-Cli", about = "Cli for the Lynx Language")]
 struct Opt {    
@@ -16,5 +18,12 @@ struct Opt {
 
 fn main() {
     let opt = Opt::from_args();
+    
     println!("{:?}", opt);
+
+    if opt.run {
+        repl::repl();
+    } else {
+        println!("check file mode~");
+    }
 }
